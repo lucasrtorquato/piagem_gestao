@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Slides do Curso</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #0d6efd;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #e9f2ff;
+        }
+
+        .card h2 {
+            margin: 0;
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Slides do Curso</h1>
+    <p>Programação em Inteligência Artificial Generativa</p>
+    <p>Clique em um slide para acessar</p>
+</header>
+
+<main class="container" id="cardsContainer"></main>
+
+<script>
+    const slides = [
+        {
+            titulo: "Slide 1",
+            url: "slide1.html"
+        },
+    ];
+
+    const container = document.getElementById("cardsContainer");
+
+    slides.forEach((slide, index) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <h2>${slide.titulo}</h2>
+            <p>Acessar conteúdo do slide</p>
+        `;
+
+        card.addEventListener("click", () => {
+            window.open(slide.url, "_blank");
+        });
+
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
