@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>IA Generativa: Gestão Estratégica e Prática 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --r-main-font: 'Inter', sans-serif;
+            --r-heading-color: #00f2ff;
+            --accent: #bc13fe;
+            --sub-accent: #00ff88;
+            --bg-card: rgba(255, 255, 255, 0.08);
+        }
+        .reveal { background: #000; }
+        .reveal h1 { font-weight: 900; text-transform: uppercase; font-size: 2.5em; color: #fff; }
+        .reveal h2 { color: var(--r-heading-color); font-weight: 800; border-left: 15px solid var(--accent); padding-left: 20px; text-align: left; margin-bottom: 30px; }
+        .reveal p, .reveal li { font-size: 1.3em; line-height: 1.4; color: #efefef; text-align: left; }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+        .card { background: var(--bg-card); padding: 30px; border-radius: 20px; border: 1px solid rgba(188, 19, 254, 0.3); }
+        .stat-huge { font-size: 4.5em; font-weight: 900; color: var(--sub-accent); display: block; line-height: 1; }
+        .highlight { color: var(--accent); font-weight: bold; }
+        .icon-top { font-size: 2.5em; color: var(--r-heading-color); margin-bottom: 15px; }
+        .step-num { background: var(--accent); color: white; padding: 5px 15px; border-radius: 50%; font-weight: 900; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <section data-background-gradient="radial-gradient(#1a1a2e, #000)">
+            <h1>Programação em IA Generativa</h1>
+            <p style="text-align: center;">SENAI Presidente Prudente | 2026</p>
+        </section>
+
+        <section>
+            <h2>Nossa Jornada de Hoje</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <p>1. O Salto da IA</p>
+                    <p>2. Como ela "Pensa"</p>
+                    <p>3. História (O Caminho)</p>
+                    <p>4. Ética e Segurança</p>
+                </div>
+                <div class="card">
+                    <p>5. O Mercado Brasileiro</p>
+                    <p>6. Guia de Implementação</p>
+                    <p>7. Exemplos por Setor</p>
+                    <p>8. Tendências 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-background-color="#111">
+            <h2 style="text-align: center; border: none;">Módulo I: O Grande Salto</h2>
+        </section>
+
+        <section>
+            <h2>IA Tradicional (A Analista)</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <i class="fas fa-filter icon-top"></i>
+                    <p>Ela funciona como um <strong>Organizador</strong>.</p>
+                </div>
+                <ul>
+                    <li>Ela separa dados.</li>
+                    <li>Ela escolhe opções.</li>
+                    <li>Ela classifica: "Isso é fraude" ou "Não é".</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>IA Generativa (A Criadora)</h2>
+            <div class="grid-2">
+                <div class="card" style="border-color: var(--sub-accent);">
+                    <i class="fas fa-magic icon-top" style="color: var(--sub-accent);"></i>
+                    <p>Ela funciona como um <strong>Artista</strong>.</p>
+                </div>
+                <ul>
+                    <li>Ela cria conteúdos novos.</li>
+                    <li>Ela inventa textos e imagens.</li>
+                    <li>Ela escreve códigos complexos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Analogia do Restaurante</h2>
+            <div class="card">
+                <p><strong>IA Tradicional:</strong> É o garçom que te traz o cardápio e ajuda a escolher o melhor prato.</p>
+                <p><strong>IA Generativa:</strong> É o Chef que cria uma receita nova baseada no que você gosta.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Por que isso mudou a Gestão?</h2>
+            <p>Saímos da era de "receber relatórios" para a era de "pedir ações".</p>
+            <p class="highlight">A IA passou de ferramenta de suporte para parceira criativa.</p>
+        </section>
+
+        <section data-background-color="#0a0a2e">
+            <h2 style="text-align: center; border: none;">Módulo II: Como ela "Pensa"?</h2>
+        </section>
+
+        <section>
+            <h2>Não é Mágica, é Probabilidade</h2>
+            <div class="card">
+                <p>A IA Generativa não "entende" o mundo como nós. Ela é uma máquina ultra potente de <strong>prever a próxima peça</strong>.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>O Jogo do Autocompletar</h2>
+            <p>Se eu disser: "O céu está...", a IA calcula que a palavra mais provável é "azul".</p>
+            <ul>
+                <li>Ela faz bilhões desses cálculos por segundo.</li>
+                <li>Ela monta frases inteiras baseada no que é estatisticamente comum.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>O "Cérebro" da IA: Redes Neurais</h2>
+            <div class="grid-2">
+                <i class="fas fa-network-wired icon-top" style="font-size: 150px;"></i>
+                <p>Inspiradas no cérebro humano, essas redes conectam bilhões de informações. Elas aprendem padrões de escrita, tom de voz e lógica.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>O que é o "Prompt"?</h2>
+            <div class="card">
+                <p>É o comando que damos. Como a IA trabalha com probabilidade, a qualidade da sua pergunta define 100% da qualidade da resposta.</p>
+                <p class="highlight">Saber perguntar é a nova habilidade do gestor.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>A Alucinação</h2>
+            <p>Por ser focada em probabilidade, às vezes ela escolhe uma palavra que combina, mas que é <strong>mentira</strong>.</p>
+            <p class="highlight">O gestor deve ser sempre o revisor final.</p>
+        </section>
+
+        <section data-background-color="#111">
+            <h2 style="text-align: center; border: none;">Módulo III: O Caminho até aqui</h2>
+        </section>
+
+        <section>
+            <h2>1950: Alan Turing</h2>
+            <p>O início de tudo. Turing perguntou: "Máquinas podem pensar?". Ele provou que a inteligência pode ser simulada por lógica.</p>
+        </section>
+
+        <section>
+            <h2>1956: O Batismo da IA</h2>
+            <div class="card">
+                <p>Cientistas acreditavam que resolveriam a IA em um único verão. Eles subestimaram a complexidade da mente humana.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>1966: ELIZA</h2>
+            <p>O primeiro chatbot. Mostrou que humanos adoram "conversar" com máquinas, mesmo sabendo que são códigos.</p>
+        </section>
+
+        <section data-background-color="#001a33">
+            <h2>70s e 90s: Os Invernos da IA</h2>
+            <div class="grid-2">
+                <i class="fas fa-snowflake icon-top" style="font-size: 120px;"></i>
+                <p>Faltou dinheiro e processamento. A IA ficou esquecida porque não entregava o que prometia.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Anos 80: Sistemas Especialistas</h2>
+            <p>A IA foca em empresas: programas com regras rígidas para ajudar médicos e engenheiros. Era útil, mas não criativa.</p>
+        </section>
+
+        <section>
+            <h2>2010: O Big Data</h2>
+            <div class="card">
+                <p>Com a internet e as redes sociais, os computadores finalmente tiveram <strong>dados suficientes</strong> para aprender sozinhos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2017: Transformers (Google)</h2>
+            <p>A invenção que permitiu à IA entender contextos longos. Sem o Transformer, o ChatGPT não existiria.</p>
+        </section>
+
+        <section data-background-color="#0a2e2e">
+            <h2 style="text-align: center; border: none;">Módulo IV: O Olhar das Empresas</h2>
+        </section>
+
+        <section>
+            <h2>O que o mercado busca em TI?</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h4 class="highlight">Agilidade</h4>
+                    <p>Reduzir processos que levavam semanas para minutos.</p>
+                </div>
+                <div class="card">
+                    <h4 class="highlight">Qualidade</h4>
+                    <p>Eliminar erros humanos em tarefas repetitivas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Competitividade</h2>
+            <p>Em 2026, não usar IA é como não usar internet nos anos 2000. As empresas buscam <strong>sobrevivência digital</strong>.</p>
+        </section>
+
+        <section>
+            <h2>Redução de Custos</h2>
+            <p>Fazer mais com menos. A IA libera os talentos humanos para pensar em estratégia enquanto ela cuida do operacional.</p>
+        </section>
+
+        <section data-background-color="#2e0a2e">
+            <h2 style="text-align: center; border: none;">Módulo V: Como implementar?</h2>
+        </section>
+
+        <section>
+            <h2>1. Ache o Problema Real</h2>
+            <div class="card">
+                <p>Não use IA só por usar. Identifique onde sua equipe perde tempo ou onde os erros mais acontecem.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Comece Pequeno (Piloto)</h2>
+            <p>Escolha um departamento. Teste a ferramenta por 30 dias. Aprenda com os erros antes de escalar para toda a empresa.</p>
+        </section>
+
+        <section>
+            <h2>3. Capacite as Pessoas</h2>
+            <div class="card">
+                <p>O maior erro é dar a ferramenta e não ensinar a usar. Invista em <strong>Alfabetização em IA</strong> para todo o time.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Governança Ética</h2>
+            <ul>
+                <li>Crie uma política de uso.</li>
+                <li>Defina o que pode e o que não pode ser enviado para a IA.</li>
+                <li>Audite os resultados para evitar preconceitos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Meça o ROI</h2>
+            <p>Quanto tempo ganhamos? Quantos erros diminuíram? Só se gerencia o que se mede.</p>
+        </section>
+
+        <section data-background-color="#111">
+            <h2 style="text-align: center; border: none;">Módulo VI: Impactos no Brasil</h2>
+        </section>
+
+        <section>
+            <h2>Grandes Corporações</h2>
+            <div class="card">
+                <p>Foco em <strong>Ganho de Escala</strong>. Elas buscam automatizar processos que envolvem milhares de clientes simultaneamente.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Médias Empresas</h2>
+            <p>Foco em <strong>Eficiência Operacional</strong>. Usam IA para profissionalizar a gestão e competir com os gigantes do setor.</p>
+        </section>
+
+        <section>
+            <h2>Pequenas Empresas (MPMEs)</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="stat-huge">77%</span>
+                    <p>Relatam ganho de agilidade.</p>
+                </div>
+                <p>A IA é o <strong>Equalizador</strong>: dá ao pequeno empresário o poder de marketing e análise de uma multinacional.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Otimismo Brasileiro</h2>
+            <span class="stat-huge">58%</span>
+            <p>Das empresas no país já usam IA, liderando a América Latina.</p>
+        </section>
+
+        <section data-background-color="#001f1f">
+            <h2 style="text-align: center; border: none;">Módulo VII: Exemplos por Setor</h2>
+        </section>
+
+        <section>
+            <h2>Recursos Humanos (RH)</h2>
+            <div class="card">
+                <p>Triagem inteligente de currículos e criação de planos de carreira personalizados para cada colaborador.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Marketing e Criação</h2>
+            <ul>
+                <li>Textos para redes sociais em segundos.</li>
+                <li>Imagens de produtos sem custo de estúdio.</li>
+                <li>Personalização de ofertas para cada cliente.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Operações (Logística)</h2>
+            <p><strong>Ambev:</strong> Uso de IA para planejar rotas que economizam combustível e tempo de entrega.</p>
+        </section>
+
+        <section>
+            <h2>Jurídico</h2>
+            <div class="card">
+                <p>Análise de riscos em contratos e resumo de processos judiciais complexos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vendas e CRM</h2>
+            <p>Previsão de quais clientes estão prestes a cancelar ou quais têm mais chance de comprar um novo produto.</p>
+        </section>
+
+        <section data-background-color="#330000">
+            <h2 style="text-align: center; border: none;">Módulo VIII: Ética e Riscos</h2>
+        </section>
+
+        <section>
+            <h2>O Problema do Viés (Caso Amazon)</h2>
+            <div class="card">
+                <p>A IA aprendeu que homens eram "melhores" para o cargo só porque a empresa contratava mais homens no passado. <strong>O algoritmo copiou o erro humano.</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Privacidade de Dados</h2>
+            <p class="highlight">O que entra na IA vira treino.</p>
+            <p>Nunca coloque segredos industriais ou salários de funcionários em IAs públicas gratuitas.</p>
+        </section>
+
+        <section>
+            <h2>Deepfakes Corporativos</h2>
+            <div class="card">
+                <p>Risco de golpes usando imagem e voz de gestores para autorizar transferências bancárias falsas.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Propriedade Intelectual</h2>
+            <p>Quem é o dono da imagem criada pela IA? O debate jurídico está apenas começando no Brasil.</p>
+        </section>
+
+        <section>
+            <h2>Transparência</h2>
+            <p>É dever ético informar ao cliente ou aluno quando um conteúdo foi gerado 100% por uma inteligência artificial.</p>
+        </section>
+
+        <section data-background-color="#002d04">
+            <h2 style="text-align: center; border: none;">Módulo IX: Governo e Brasil</h2>
+        </section>
+
+        <section>
+            <h2>Adoção Corporativa</h2>
+            <div class="card">
+                <span class="stat-huge">79%</span>
+                <p>Das empresas no Brasil pretendem expandir seus planos de IA este ano.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Receita Federal</h2>
+            <p>Uso de IA para <strong>Combate à Fraude</strong>. O cruzamento de dados agora identifica sonegadores em tempo real.</p>
+        </section>
+
+        <section>
+            <h2>Justiça: Projeto Victor</h2>
+            <div class="card">
+                <p>O STF utiliza IA para organizar e triar milhares de processos, reduzindo o tempo de espera judicial.</p>
+            </div>
+        </section>
+
+         <section>
+            <h2>A IA vai tirar meu emprego</h2>
+            <p>Esse é um medo constante em relação ao avanço da IA, mas calma...</p>
+        </section>
+
+        <section>
+            <h2>O Futuro é Colaborativo</h2>
+            <div class="card">
+                <p>"A IA não vai tirar o emprego das pessoas. Pessoas que sabem usar a IA vão tirar o emprego de quem não sabe."</p>
+                <p>Por isso é muito importante se capacitar 👍</p>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        center: true,
+        width: 1280,
+        height: 720,
+        transition: 'slide',
+        slideNumber: 'c/t'
+    });
+</script>
+
+</body>
+</html>
