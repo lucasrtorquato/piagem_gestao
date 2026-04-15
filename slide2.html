@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Aula: Engenharia de Prompt para Gestão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --r-main-font: 'Inter', sans-serif;
+            --r-heading-color: #00f2ff;
+            --accent: #bc13fe;
+            --sub-accent: #00ff88;
+            --bg-card: rgba(255, 255, 255, 0.08);
+        }
+        .reveal { background: #000; }
+        .reveal h1 { font-weight: 900; text-transform: uppercase; font-size: 2.2em; color: #fff; }
+        .reveal h2 { color: var(--r-heading-color); font-weight: 800; border-left: 12px solid var(--accent); padding-left: 20px; text-align: left; margin-bottom: 25px; font-size: 1.5em; }
+        .reveal p, .reveal li { font-size: 1em; line-height: 1.4; color: #efefef; text-align: left; }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+        .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 15px; align-items: stretch; }
+        .card { background: var(--bg-card); padding: 25px; border-radius: 15px; border: 1px solid rgba(188, 19, 254, 0.3); }
+        .highlight { color: var(--accent); font-weight: bold; }
+        .icon-top { font-size: 1.8em; color: var(--r-heading-color); margin-bottom: 15px; }
+        .example-box { background: #0a0a0a; padding: 15px; border-radius: 8px; border-left: 5px solid var(--sub-accent); font-family: sans-serif; margin-top: 10px; font-size: 0.9em; }
+        .badge { background: #333; color: var(--sub-accent); padding: 2px 8px; border-radius: 4px; font-size: 0.7em; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <section data-background-gradient="radial-gradient(#1a1a2e, #000)">
+            <p style="text-align: center; font-weight: bold; color: var(--accent);">CURSO: IA GENERATIVA</p>
+            <h1>Engenharia de Prompt</h1>
+            <p style="text-align: center; opacity: 0.8;">Fundamentos e Técnicas de Redação de Instruções</p>
+            <p style="text-align: center; font-size: 0.7em; margin-top: 50px;">SENAI Presidente Prudente | 2026</p>
+        </section>
+
+        <section>
+            <h2>Objetivos de Aprendizagem</h2>
+            <div class="card">
+                <ul>
+                    <li>Compreender a estrutura técnica de um prompt.</li>
+                    <li>Aplicar roteiros de redação (RISE) para tarefas de gestão.</li>
+                    <li>Identificar e corrigir respostas imprecisas da IA.</li>
+                    <li>Implementar protocolos de segurança de dados corporativos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>O que é Engenharia de Prompt?</h2>
+            <p>É a disciplina que foca na otimização das entradas de texto (prompts) para obter resultados precisos de modelos de linguagem.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <p class="highlight">Foco na Clareza</p>
+                    <p>Eliminação de ambiguidades na comunicação com a máquina.</p>
+                </div>
+                <div class="card">
+                    <p class="highlight">Foco no Contexto</p>
+                    <p>Suporte de dados necessários para a execução correta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-background-color="#0a0a2e">
+            <h2>Processamento da Instrução</h2>
+            <p>Os modelos operam por <strong>probabilidade estatística</strong>. Eles não possuem consciência do contexto da empresa além do que é escrito.</p>
+            <div class="example-box">
+                Instruções incompletas levam o modelo a preencher lacunas com informações genéricas, aumentando o risco de erros factuais.
+            </div>
+        </section>
+
+        <section>
+            <h2>O Framework R.I.S.E.</h2>
+            <p>A metodologia sistemática para estruturar prompts gerenciais eficazes.</p>
+            <div class="grid-4">
+                <div class="card">
+                    <p class="highlight">R</p>
+                    <p>Role (Papel)</p>
+                </div>
+                <div class="card">
+                    <p class="highlight">I</p>
+                    <p>Instruction (Ação)</p>
+                </div>
+                <div class="card">
+                    <p class="highlight">S</p>
+                    <p>Situation (Cenário)</p>
+                </div>
+                <div class="card">
+                    <p class="highlight">E</p>
+                    <p>Expectation (Saída)</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>[R]ole: Atribuição de Atuação</h2>
+            <p>Definir um perfil técnico ajuda a IA a filtrar o vocabulário e a profundidade da resposta.</p>
+            <div class="example-box">
+                "Atue como um Especialista em Logística Industrial..."<br>
+                "Atue como um Analista de Recursos Humanos Sênior..."<br>
+                "Atue como um Coordenador de Qualidade ISO 9001..."
+            </div>
+        </section>
+
+        <section>
+            <h2>[I]nstruction: Especificação da Tarefa</h2>
+            <p>Utilize verbos no imperativo para direcionar a execução de forma inequívoca.</p>
+            <div class="card">
+                <ul>
+                    <li><strong>Analise</strong> o histórico de manutenção...</li>
+                    <li><strong>Sintetize</strong> este relatório em três tópicos...</li>
+                    <li><strong>Elabore</strong> uma escala de revezamento...</li>
+                    <li><strong>Identifique</strong> riscos potenciais nesta operação...</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>[S]ituation: Fornecimento de Dados</h2>
+            <p>O nível de utilidade da resposta é proporcional ao volume de dados de contexto fornecidos.</p>
+            <div class="example-box">
+                <strong>Comando Limitado:</strong> "Crie um plano de treinamento."<br><br>
+                <strong>Comando Contextualizado:</strong> "Crie um plano de treinamento de segurança para 10 novos funcionários que atuarão especificamente no setor de fundição."
+            </div>
+        </section>
+
+        <section>
+            <h2>[E]xpectation: Formatos de Entrega</h2>
+            <p>Solicite que a IA organize a informação para facilitar o consumo imediato.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <p class="highlight">Tabelas e Planilhas</p>
+                    <p>Para dados estruturados e comparativos.</p>
+                </div>
+                <div class="card">
+                    <p class="highlight">Estrutura de Tópicos</p>
+                    <p>Para resumos executivos e check-lists.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-background-color="#111">
+            <h2>Restrições de Execução</h2>
+            <p>Defina barreiras para evitar resultados irrelevantes ou prolixos.</p>
+            <ul>
+                <li>"Não utilize jargões acadêmicos."</li>
+                <li>"Limite a resposta a uma página."</li>
+                <li>"Considere apenas a legislação brasileira vigente."</li>
+                <li>"Ignore dados anteriores ao ano de 2024."</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>O Ciclo de Iteração</h2>
+            <p>A interação com a IA deve ser vista como um processo de refinamento contínuo.</p>
+            <ol>
+                <li>Avaliação da primeira resposta gerada.</li>
+                <li>Identificação de lacunas ou excessos.</li>
+                <li>Envio de comandos corretivos específicos para ajuste do texto original.</li>
+            </ol>
+        </section>
+
+        <section data-background-color="#2e0a2e">
+            <h2>Cadeia de Pensamento</h2>
+            <p>Para decisões complexas, instrua a IA a detalhar a lógica antes da conclusão.</p>
+            <div class="example-box">
+                "Antes de sugerir o novo fluxo de trabalho, exponha os pontos de atrito que você identificou no processo atual."
+            </div>
+        </section>
+
+        <section>
+            <span class="badge">Exemplo Real</span>
+            <h2>Comunicação Interna</h2>
+            <div class="example-box">
+                "Com base na planilha de turnos (anexa), redija um comunicado oficial para a equipe técnica sobre a manutenção preventiva do compressor principal no próximo sábado. O texto deve ser direto, listar os horários de interrupção (8h às 12h), as linhas afetadas (B e C) e os procedimentos de segurança específicos para desligamento de energia (LOTO)."
+            </div>
+        </section>
+
+        <section>
+            <span class="badge">Exemplo Real</span>
+            <h2>Processamento de Relatórios</h2>
+            <div class="example-box">
+                "Atue como um Engenheiro de Produção. Analise o relatório de OEE (anexo) da Linha de Envasamento referente a Maio/2026. Identifique as três maiores causas de indisponibilidade, calcule o impacto financeiro estimado com base no custo de paragem (fictício) fornecido e sugira duas ações corretivas de baixo custo."
+            </div>
+        </section>
+
+        <section>
+            <span class="badge">Exemplo Real</span>
+            <h2>RH: Ementa de Treinamento</h2>
+            <div class="example-box">
+                "Atue como Coordenador de Treinamento e Desenvolvimento do SENAI. Com base na matriz de competências da Indústria X (anexa), elabore uma ementa para um curso de 16 horas sobre 'Manutenção Preditiva em IoT Industrial'. A ementa deve incluir: Objetivos, Pré-requisitos, Conteúdo Programático detalhado e Método de Avaliação."
+            </div>
+        </section>
+
+        <section data-background-color="#331a00">
+            <h2>Validação e Responsabilidade</h2>
+            <p>O gestor detém a responsabilidade final sobre qualquer conteúdo gerado.</p>
+            <div class="card">
+                <ul>
+                    <li>Revisão técnica de termos específicos.</li>
+                    <li>Auditoria de valores numéricos e cálculos.</li>
+                    <li>Confirmação de fontes e datas citadas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section data-background-color="#330000">
+            <h2>Protocolos de Dados</h2>
+            <p>Diretrizes essenciais para o uso de ferramentas de IA:</p>
+            <div class="card">
+                <p class="highlight">Restrição Total:</p>
+                <p>É vedada a inserção de dados financeiros sigilosos, senhas, propriedade intelectual estratégica ou dados identificáveis de terceiros em modelos públicos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Viés Algorítmico</h2>
+            <p>Consciência sobre as limitações éticas da tecnologia.</p>
+            <ul>
+                <li>Identificação de preconceitos em sugestões automatizadas.</li>
+                <li>Manutenção do fator humano em avaliações de desempenho.</li>
+                <li>Transparência no uso de ferramentas de IA para a equipe.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Instruções de Longo Prazo</h2>
+            <p>O uso de "Instruções de Sistema" permite padronizar todas as interações da IA.</p>
+            <div class="card">
+                <p>Configuração de padrões permanentes, como o uso de linguagem formal, conformidade com normas técnicas específicas e formatos de arquivo preferenciais.</p>
+            </div>
+        </section>
+
+        <section data-background-color="#1a1a2e">
+            <h2>Síntese RISE</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <p>Defina o <strong>[R]ole</strong> (Quem)</p>
+                    <p>Explique a <strong>[I]nstruction</strong> (O que)</p>
+                </div>
+                <div class="card">
+                    <p>Contextualize a <strong>[S]ituation</strong> (Onde)</p>
+                    <p>Sinalize a <strong>[E]xpectation</strong> (Como)</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-background-gradient="linear-gradient(to bottom, #000, #1a1a2e)">
+            <h2>Encerramento</h2>
+            <p>A engenharia de prompt é uma competência fundamental para a gestão baseada em dados.</p>
+            <div class="card">
+                <p>O domínio desta técnica permite a automação de tarefas burocráticas e a ampliação da capacidade analítica do gestor.</p>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-weight: bold; color: var(--sub-accent);">SENAI - Presidente Prudente</p>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        center: true,
+        width: 1280,
+        height: 720,
+        transition: 'slide',
+        slideNumber: 'c/t'
+    });
+</script>
+
+</body>
+</html>
