@@ -8,7 +8,7 @@ Cada card representa um slide/aula e direciona para o material correspondente.
 
 ## 🚀 Acesso ao projeto
 
-👉 (coloque aqui o link do seu GitHub Pages)
+👉 https://lucasrtorquato.github.io/piagem/
 
 ---
 
