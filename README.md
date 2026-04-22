@@ -26,7 +26,3 @@ Facilitar o acesso dos alunos aos conteúdos das aulas de forma:
 - HTML5
 - CSS3
 - JavaScript
-
----
-
-## 📂 Estrutura do projeto
